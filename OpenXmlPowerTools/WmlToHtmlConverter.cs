@@ -2993,9 +2993,9 @@ namespace OpenXmlPowerTools
         // Don't process wmf files (with contentType == "image/x-wmf") because GDI consumes huge amounts
         // of memory when dealing with wmf perhaps because it loads a DLL to do the rendering?
         // It actually works, but is not recommended.
-        private static readonly List<string> ImageContentTypes = new List<string>
+        private static readonly HashSet<string> ImageContentTypes = new HashSet<string>
         {
-            "image/png", "image/gif", "image/tiff", "image/jpeg"
+            "image/png", "image/gif", "image/tiff", "image/jpeg", "image/emf", "image/x-emf"
         };
 
 
